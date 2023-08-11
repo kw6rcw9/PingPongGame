@@ -102,7 +102,13 @@ namespace testApp
             db.OpenConnection();
 
             int countUser = Convert.ToInt32(command.ExecuteScalar());
-            if (countUser > 0) MessageBox.Show("User exists");
+            if (countUser > 0)
+            {
+                this.Hide();
+                PingPong pingPong = new PingPong();
+                pingPong.ShowDialog();
+                this.Close();
+            }
             else MessageBox.Show("User does not exists");
 
 
