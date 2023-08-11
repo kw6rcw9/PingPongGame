@@ -43,7 +43,7 @@
             // Platform
             // 
             this.Platform.BackColor = System.Drawing.Color.Coral;
-            this.Platform.Location = new System.Drawing.Point(271, 395);
+            this.Platform.Location = new System.Drawing.Point(271, 412);
             this.Platform.Name = "Platform";
             this.Platform.Size = new System.Drawing.Size(224, 26);
             this.Platform.TabIndex = 0;
@@ -67,6 +67,7 @@
             // GamePanel
             // 
             this.GamePanel.Controls.Add(this.LoseLabel);
+            this.GamePanel.Controls.Add(this.Platform);
             this.GamePanel.Controls.Add(this.ResultLabel);
             this.GamePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GamePanel.Location = new System.Drawing.Point(0, 0);
@@ -101,7 +102,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.GameBall);
-            this.Controls.Add(this.Platform);
             this.Controls.Add(this.GamePanel);
             this.Name = "PingPong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

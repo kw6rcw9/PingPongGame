@@ -16,7 +16,7 @@ namespace testApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PingPong());
+            Application.Run(new AuthForm());
         }
     }
 }
