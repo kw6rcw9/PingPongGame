@@ -41,7 +41,16 @@ namespace testApp
             {
                 Platform.Left += _platformSpeed;
             }
-
+            else if(e.KeyCode == Keys.R && !timer.Enabled)
+            {
+                Random random = new Random();
+                GameBall.Top = random.Next(20,300);
+                GameBall.Left = random.Next(20, 500);
+                _score = 0;
+                LoseLabel.Visible = false;
+                ResultLabel.Text = "Результат: 0";
+                timer.Enabled = true;
+            }
         }
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -54,6 +63,7 @@ namespace testApp
             if (GameBall.Bottom >= GamePanel.Bottom)
             {
                 timer.Enabled = false;
+                LoseLabel.Visible = true;
             }
             if(GameBall.Right >= GamePanel.Right)
             {
@@ -69,7 +79,11 @@ namespace testApp
             {
                 _speedVer *= -1;
                 _score++;
+                ResultLabel.Text = "Результат: " + _score;
+                Random rnd = new Random();
+                GamePanel.BackColor = Color.FromArgb(rnd.Next(150,255), rnd.Next(150, 255), rnd.Next(150, 255));
             }
+
         }
 
     }

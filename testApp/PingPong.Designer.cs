@@ -33,8 +33,11 @@
             this.GameBall = new System.Windows.Forms.PictureBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.GamePanel = new System.Windows.Forms.Panel();
+            this.ResultLabel = new System.Windows.Forms.Label();
+            this.LoseLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Platform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameBall)).BeginInit();
+            this.GamePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Platform
@@ -63,11 +66,34 @@
             // 
             // GamePanel
             // 
+            this.GamePanel.Controls.Add(this.LoseLabel);
+            this.GamePanel.Controls.Add(this.ResultLabel);
             this.GamePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GamePanel.Location = new System.Drawing.Point(0, 0);
             this.GamePanel.Name = "GamePanel";
             this.GamePanel.Size = new System.Drawing.Size(800, 450);
             this.GamePanel.TabIndex = 2;
+            // 
+            // ResultLabel
+            // 
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ResultLabel.Location = new System.Drawing.Point(644, 19);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(135, 24);
+            this.ResultLabel.TabIndex = 0;
+            this.ResultLabel.Text = "Результат: 0";
+            // 
+            // LoseLabel
+            // 
+            this.LoseLabel.AutoSize = true;
+            this.LoseLabel.Font = new System.Drawing.Font("Micra", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoseLabel.Location = new System.Drawing.Point(276, 223);
+            this.LoseLabel.Name = "LoseLabel";
+            this.LoseLabel.Size = new System.Drawing.Size(252, 21);
+            this.LoseLabel.TabIndex = 1;
+            this.LoseLabel.Text = "Вы проиграли";
+            this.LoseLabel.Visible = false;
             // 
             // PingPong
             // 
@@ -84,6 +110,8 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PingPong_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.Platform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameBall)).EndInit();
+            this.GamePanel.ResumeLayout(false);
+            this.GamePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -94,5 +122,7 @@
         private System.Windows.Forms.PictureBox GameBall;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Panel GamePanel;
+        private System.Windows.Forms.Label ResultLabel;
+        private System.Windows.Forms.Label LoseLabel;
     }
 }
