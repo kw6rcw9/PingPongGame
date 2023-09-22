@@ -33,6 +33,7 @@
             this.UserLoginField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.LinkToReg = new System.Windows.Forms.LinkLabel();
+            this.LinkToEdit = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // AuthButton
@@ -93,11 +94,26 @@
             this.LinkToReg.VisitedLinkColor = System.Drawing.Color.Black;
             this.LinkToReg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkToReg_LinkClicked);
             // 
+            // LinkToEdit
+            // 
+            this.LinkToEdit.AutoSize = true;
+            this.LinkToEdit.LinkColor = System.Drawing.Color.Blue;
+            this.LinkToEdit.Location = new System.Drawing.Point(76, 289);
+            this.LinkToEdit.Name = "LinkToEdit";
+            this.LinkToEdit.Size = new System.Drawing.Size(132, 13);
+            this.LinkToEdit.TabIndex = 11;
+            this.LinkToEdit.TabStop = true;
+            this.LinkToEdit.Text = "Изменить пользователя";
+            this.LinkToEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LinkToEdit.VisitedLinkColor = System.Drawing.Color.Black;
+            this.LinkToEdit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkToEdit_LinkClicked);
+            // 
             // AuthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 311);
+            this.Controls.Add(this.LinkToEdit);
             this.Controls.Add(this.LinkToReg);
             this.Controls.Add(this.AuthButton);
             this.Controls.Add(this.UserPasswordField);
@@ -120,5 +136,6 @@
         private System.Windows.Forms.TextBox UserLoginField;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel LinkToReg;
+        private System.Windows.Forms.LinkLabel LinkToEdit;
     }
 }

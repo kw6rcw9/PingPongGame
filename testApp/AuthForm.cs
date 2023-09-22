@@ -144,6 +144,15 @@ namespace testApp
             register.ShowDialog();
             this.Close();
         }
+
+        private void LinkToEdit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            EditForm edit = new EditForm();
+            edit.ShowDialog();
+            this.Close();
+
+        }
     }
 
 }
